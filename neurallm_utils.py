@@ -128,4 +128,48 @@ def load_word2vec(filename: str) -> Word2Vec:
 # your neurallm_utils.py file
 # You'll need it for the next task!
 def create_embedder(raw_embeddings: Word2Vec) -> torch.nn.Embedding:
-    pass
+    """
+    Create a PyTorch embedding layer based on our data.
+
+    We will *first* train a Word2Vec model on our data.
+    Then, we'll use these weights to create a PyTorch embedding layer.
+        `nn.Embedding.from_pretrained(weights)`
+
+
+    PyTorch docs: https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html#torch.nn.Embedding.from_pretrained
+    Gensim Word2Vec docs: https://radimrehurek.com/gensim/models/word2vec.html
+
+    Pay particular attention to the *types* of the weights and the types required by PyTorch.
+
+    Params:
+        data: The corpus
+        embeddings_size: The dimensions in each embedding
+
+    Returns:
+        A PyTorch embedding layer
+    """
+
+    # Hint:
+    # For later tasks, we'll need two mappings: One from token to index, and one from index to tokens.
+    # It might be a good idea to store these as properties of your embedder.
+    # e.g. `embedder.token_to_index = ...`
+
+    # Create mappings
+    
+    #get word vectors
+    word_vectors = raw_embeddings.wv.vectors  
+    #convert to tensor 
+    wv_tensor = torch.tensor(word_vectors, dtype=torch.float32)
+    #pass in new weights  
+    embedding = torch.nn.Embedding.from_pretrained(wv_tensor)
+
+    token_to_index = dict()
+    index_to_token = dict()
+    for token in raw_embeddings.wv.index_to_key:
+        token_to_index[token] = raw_embeddings.wv.key_to_index[token]
+        index_to_token[raw_embeddings.wv.key_to_index[token]] = token
+
+    embedding.token_to_index = token_to_index
+    embedding.index_to_token = index_to_token
+    #return embedding
+    return embedding
