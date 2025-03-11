@@ -416,3 +416,106 @@ def full_pipeline(data, word_embeddings_filename: str,
     train(dataloader=dataloader_train, model=model, epochs=epochs, lr=lr)
     
     return model
+
+# -------------------------------
+# Prediction and generation functions
+# -------------------------------
+
+# Create a function that predicts the next token in a sequence.
+def predict(model, input_tokens) -> str:
+    """
+    Get the model's next word prediction for an input.
+    This is where you'll use the softmax function!
+    Assume that the input tokens do not contain any unknown tokens.
+
+    Params:
+        model: Your trained model
+        input_tokens: A list of natural-language tokens. Must be length N-1.
+
+    Returns:
+        The predicted token (not the predicted index!)
+    """
+    # YOUR CODE HERE
+	# Encode tokens
+    encoded_tokens = [model.embedding_layer.token_to_index[token] for token in input_tokens]
+    
+	# Trasform to tensor
+    encoded_tokens = torch.tensor([encoded_tokens]) # Dim [1, ngram-1]
+    
+    # Setting model to evaluation mode turns off Dropout and BatchNorm making the predictions deterministic
+    model.eval()  # Set the model to evaluation mode if you haven't already
+    
+    with torch.no_grad(): # Speeds up inference and reduces memory usage by not having to calcualte gradients
+        logits = model(encoded_tokens) # Forward pass on the model
+        probability = nn.functional.softmax(logits, dim=1) # Normalize z scores to probability
+        predicted_idx = torch.multinomial(probability, num_samples=1).item()
+
+        #predicted_idx = probability.argmax(dim=1).item() # Retrieve int value
+		
+	# Transform index to natural-language token
+    predicted_token = model.embedding_layer.index_to_token[predicted_idx] 
+    
+    return predicted_token
+
+from typing import List
+# Generate a sequence from the model until you get an end of sentence token.
+def generate(model, seed: List[str], max_tokens: int = None) -> List[str]:
+    """
+    Use the trained model to generate a sentence.
+    This should be somewhat similar to generation for HW2...
+    Make sure to use your predict function!
+
+    Params:
+        model: Your trained model
+        seed: [w_1, w_2, ..., w_(n-1)].
+        max_tokens: The maximum number of tokens to generate. When None, should gener
+            generate until the end of sentence token is reached.
+
+    Return:
+        A list of generated tokens.
+    """ 
+    n_tokens = 0 # Count tokens that have been generated
+    tokens = seed.copy() # Copy of initial seed
+    end_token = "<\s>"
+    
+    while True:
+        for_prediction = seed[-(model.ngram-1):]
+        predicted_token = predict(model, for_prediction)
+        if predicted_token == end_token:
+        	break
+        tokens.append(predicted_token)
+        n_tokens += 1
+        if max_tokens is not None and n_tokens >= max_tokens:
+            break
+        
+    return tokens
+
+def generate_sentences(model, seed: List[str],  n_sentences: int, max_tokens: int = None) -> List[str]:
+    return [generate(model, seed, max_tokens) for i in range(n_sentences)]
+
+# you might want to define some functions to help you format the text nicely
+# and/or generate multiple sequences
+
+def format_sentence(tokens_list: List[List[str]], by_char = False) -> str:
+  """Removes <s> at the start of the sentence and </s> at ehe end. Joins the list of tokens into a string and capitalizes it.
+  Args:
+    tokens (list(list)): the list of tokens list to be formatted into a sentence
+
+  Returns:
+    string: formatted sentence as a string
+  
+  """
+  text = "" # Initializing final sentence
+  for tokens in tokens_list: # Parsing through each individual sentence
+    while tokens[0] == '<s>': # Removes all <s> at the beggining even if there are several for ngram > 2 models
+      tokens.pop(0)
+    if tokens[-1] == '</s>': # Removes the one </s> at the end of the sentence
+      tokens.pop(-1)
+    if by_char:
+      sentence = "".join(tokens) # Converts list of tokens into a string
+      sentence = sentence.capitalize() # Capitalizes the first letter of each sentence
+    else:
+      sentence = " ".join(tokens) # Converts list of tokens into a string
+      sentence = sentence.capitalize() # Capitalizes the first letter of each sentence
+    text += sentence + ".\n" # Adds a period and space separator between sentences
+  return text.strip(" ") # Removes the last space in the last sentence
