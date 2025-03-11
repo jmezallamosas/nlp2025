@@ -173,3 +173,21 @@ def create_embedder(raw_embeddings: Word2Vec) -> torch.nn.Embedding:
     embedding.index_to_token = index_to_token
     #return embedding
     return embedding
+
+def train_word2vec(data: list[list[str]], embeddings_size: int,
+                    window: int = 5, min_count: int = 1, sg: int = 1) -> Word2Vec:
+    """
+    Create new word embeddings based on our data.
+
+    Params:
+        data: The corpus
+        embeddings_size: The dimensions in each embedding
+
+    Returns:
+        A gensim Word2Vec model
+        https://radimrehurek.com/gensim/models/word2vec.html
+
+    """
+
+    model = Word2Vec(data, vector_size=embeddings_size, window=window, min_count=min_count, sg=sg)
+    return model

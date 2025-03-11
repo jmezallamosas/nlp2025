@@ -1,5 +1,9 @@
 import torch
 import torch.nn as nn
+from torch.utils.data import TensorDataset, DataLoader
+import torch.optim as optim
+from tqdm.autonotebook import tqdm
+import neurallm_utils as nutils
 
 # -------------------------------
 # Data processing functions
@@ -204,8 +208,6 @@ def train(dataloader, model, epochs: int = 1, lr: float = 0.001) -> None:
         epoch_loss = train_one_epoch(dataloader, model, optimizer, loss_fn)
         avg_epoch_loss = epoch_loss / n_batches
         print(f"Epoch: {epoch}, Average Loss: {avg_epoch_loss:.4f}")
-        # Log metrics to wandb
-        wandb.log({"epoch": epoch, "avg_epoch_loss": avg_epoch_loss})
 
 def full_pipeline(data, word_embeddings_filename: str, 
                   batch_size: int,
@@ -231,8 +233,8 @@ def full_pipeline(data, word_embeddings_filename: str,
         The trained FFNN model.
     """
     # Load embeddings and create an embedder.
-    token_embeddings = load_word2vec(word_embeddings_filename)
-    embedder = create_embedder(token_embeddings)
+    token_embeddings = nutils.load_word2vec(word_embeddings_filename)
+    embedder = nutils.create_embedder(token_embeddings)
     
     # Preprocess data.
     encoded_tokens = encode_tokens(data, embedder)
