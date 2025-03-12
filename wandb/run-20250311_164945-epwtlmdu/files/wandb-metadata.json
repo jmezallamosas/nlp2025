@@ -1,0 +1,79 @@
+{
+  "os": "Linux-3.10.0-1160.25.1.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "CPython 3.9.21",
+  "startedAt": "2025-03-11T20:49:45.675892Z",
+  "program": "<python with no main file>",
+  "git": {
+    "remote": "https://github.com/jmezallamosas/nlp2025.git"
+  },
+  "email": "mezallamosas.j@northeastern.edu",
+  "root": "/home/mezallamosas.j/nlp2025",
+  "host": "c2173",
+  "executable": "/home/mezallamosas.j/.conda/envs/nlp/bin/python",
+  "cpu_count": 24,
+  "cpu_count_logical": 48,
+  "gpu": "Tesla K40m",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "20961034240",
+      "used": "15359221760"
+    }
+  },
+  "memory": {
+    "total": "134288478208"
+  },
+  "cpu": {
+    "count": 24,
+    "countLogical": 48
+  },
+  "gpu_nvidia": [
+    {
+      "name": "Tesla K40m",
+      "memoryTotal": "11997020160",
+      "architecture": "Kepler"
+    }
+  ],
+  "slurm": {
+    "cluster_name": "(null)",
+    "conf": "/etc/slurm/slurm.conf",
+    "cpus_on_node": "2",
+    "cpus_per_task": "2",
+    "export_env": "NONE",
+    "get_user_env": "1",
+    "gpus_on_node": "1",
+    "gtids": "0",
+    "job_account": "a.paul",
+    "job_cpus_per_node": "2",
+    "job_end_time": "1741732766",
+    "job_gid": "100",
+    "job_gpus": "0",
+    "job_id": "47287314",
+    "job_name": "sys/dashboard/sys/jupyterlab",
+    "job_nodelist": "c2173",
+    "job_num_nodes": "1",
+    "job_partition": "gpu-short",
+    "job_qos": "normal",
+    "job_start_time": "1741725566",
+    "job_uid": "92070",
+    "job_user": "mezallamosas.j",
+    "jobid": "47287314",
+    "localid": "0",
+    "mem_per_node": "32768",
+    "nnodes": "1",
+    "nodeid": "0",
+    "nodelist": "c2173",
+    "overlap": "1",
+    "prio_process": "0",
+    "procid": "0",
+    "script_context": "prolog_task",
+    "submit_dir": "/var/www/ood/apps/sys/dashboard",
+    "submit_host": "infra-0a",
+    "task_pid": "34330",
+    "tasks_per_node": "1",
+    "topology_addr": "c2173",
+    "topology_addr_pattern": "node",
+    "tres_per_task": "cpu:2"
+  },
+  "cudaVersion": "11.4"
+}

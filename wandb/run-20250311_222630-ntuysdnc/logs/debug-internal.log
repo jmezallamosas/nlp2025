@@ -1,0 +1,16 @@
+{"time":"2025-03-11T22:26:30.820378432-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/home/mezallamosas.j/nlp2025/wandb/run-20250311_222630-ntuysdnc/logs/debug-core.log"}
+{"time":"2025-03-11T22:26:30.944377283-04:00","level":"INFO","msg":"created new stream","id":"ntuysdnc"}
+{"time":"2025-03-11T22:26:30.944424035-04:00","level":"INFO","msg":"stream: started","id":"ntuysdnc"}
+{"time":"2025-03-11T22:26:30.944537448-04:00","level":"INFO","msg":"handler: started","stream_id":"ntuysdnc"}
+{"time":"2025-03-11T22:26:30.94458381-04:00","level":"INFO","msg":"sender: started","stream_id":"ntuysdnc"}
+{"time":"2025-03-11T22:26:30.944553484-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"ntuysdnc"}
+{"time":"2025-03-11T22:26:31.123454122-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-11T22:32:52.801220484-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-11T22:32:52.803448736-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-11T22:32:53.242815507-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-11T22:32:53.502410626-04:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-03-11T22:32:53.518162416-04:00","level":"INFO","msg":"stream: closing","id":"ntuysdnc"}
+{"time":"2025-03-11T22:32:53.518192266-04:00","level":"INFO","msg":"handler: closed","stream_id":"ntuysdnc"}
+{"time":"2025-03-11T22:32:53.518239198-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ntuysdnc"}
+{"time":"2025-03-11T22:32:53.518259387-04:00","level":"INFO","msg":"sender: closed","stream_id":"ntuysdnc"}
+{"time":"2025-03-11T22:32:53.520031626-04:00","level":"INFO","msg":"stream: closed","id":"ntuysdnc"}

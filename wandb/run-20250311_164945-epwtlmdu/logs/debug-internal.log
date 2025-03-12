@@ -1,0 +1,10 @@
+{"time":"2025-03-11T16:49:45.716153441-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/home/mezallamosas.j/nlp2025/wandb/run-20250311_164945-epwtlmdu/logs/debug-core.log"}
+{"time":"2025-03-11T16:49:48.672234586-04:00","level":"INFO","msg":"created new stream","id":"epwtlmdu"}
+{"time":"2025-03-11T16:49:48.672347879-04:00","level":"INFO","msg":"stream: started","id":"epwtlmdu"}
+{"time":"2025-03-11T16:49:48.672376926-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"epwtlmdu"}
+{"time":"2025-03-11T16:49:48.67259619-04:00","level":"INFO","msg":"handler: started","stream_id":"epwtlmdu"}
+{"time":"2025-03-11T16:49:48.672619947-04:00","level":"INFO","msg":"sender: started","stream_id":"epwtlmdu"}
+{"time":"2025-03-11T16:49:48.963689856-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-11T16:49:49.129231316-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-11T16:49:49.1306121-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-11T16:49:49.569084973-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}

@@ -1,0 +1,8 @@
+{"time":"2025-03-11T17:38:35.098072361-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/home/mezallamosas.j/nlp2025/wandb/run-20250311_173835-u6bpltzf/logs/debug-core.log"}
+{"time":"2025-03-11T17:38:35.223561991-04:00","level":"INFO","msg":"created new stream","id":"u6bpltzf"}
+{"time":"2025-03-11T17:38:35.223595033-04:00","level":"INFO","msg":"stream: started","id":"u6bpltzf"}
+{"time":"2025-03-11T17:38:35.223612633-04:00","level":"INFO","msg":"handler: started","stream_id":"u6bpltzf"}
+{"time":"2025-03-11T17:38:35.223678507-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"u6bpltzf"}
+{"time":"2025-03-11T17:38:35.223681248-04:00","level":"INFO","msg":"sender: started","stream_id":"u6bpltzf"}
+{"time":"2025-03-11T17:38:35.375239177-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-11T17:40:23.292139915-04:00","level":"INFO","msg":"Pausing system monitor"}

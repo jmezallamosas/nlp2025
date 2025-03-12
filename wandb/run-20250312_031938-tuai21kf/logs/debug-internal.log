@@ -1,0 +1,16 @@
+{"time":"2025-03-12T03:19:39.055821243-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/home/mezallamosas.j/nlp2025/wandb/run-20250312_031938-tuai21kf/logs/debug-core.log"}
+{"time":"2025-03-12T03:19:39.183975041-04:00","level":"INFO","msg":"created new stream","id":"tuai21kf"}
+{"time":"2025-03-12T03:19:39.184022956-04:00","level":"INFO","msg":"stream: started","id":"tuai21kf"}
+{"time":"2025-03-12T03:19:39.184061192-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"tuai21kf"}
+{"time":"2025-03-12T03:19:39.18408843-04:00","level":"INFO","msg":"handler: started","stream_id":"tuai21kf"}
+{"time":"2025-03-12T03:19:39.184105617-04:00","level":"INFO","msg":"sender: started","stream_id":"tuai21kf"}
+{"time":"2025-03-12T03:19:39.347800934-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-12T04:56:41.121584019-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-12T04:56:41.124396376-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-12T04:56:41.592563328-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-12T04:56:41.734700375-04:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-03-12T04:56:41.75310798-04:00","level":"INFO","msg":"stream: closing","id":"tuai21kf"}
+{"time":"2025-03-12T04:56:41.753142378-04:00","level":"INFO","msg":"handler: closed","stream_id":"tuai21kf"}
+{"time":"2025-03-12T04:56:41.753157892-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"tuai21kf"}
+{"time":"2025-03-12T04:56:41.753174314-04:00","level":"INFO","msg":"sender: closed","stream_id":"tuai21kf"}
+{"time":"2025-03-12T04:56:41.755279401-04:00","level":"INFO","msg":"stream: closed","id":"tuai21kf"}

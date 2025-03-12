@@ -1,0 +1,16 @@
+wandb_version: 1
+
+batch_size:
+  value: 128
+embeddings_size:
+  value: 100
+epochs:
+  value: 5
+hidden_units:
+  value: 256
+lr:
+  value: 0.001
+ngram:
+  value: 4
+test_pct:
+  value: 0.1

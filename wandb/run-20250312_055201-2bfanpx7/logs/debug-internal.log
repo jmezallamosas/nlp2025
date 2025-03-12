@@ -1,0 +1,7 @@
+{"time":"2025-03-12T05:52:01.967741842-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/home/mezallamosas.j/nlp2025/wandb/run-20250312_055201-2bfanpx7/logs/debug-core.log"}
+{"time":"2025-03-12T05:52:02.089367556-04:00","level":"INFO","msg":"created new stream","id":"2bfanpx7"}
+{"time":"2025-03-12T05:52:02.089413915-04:00","level":"INFO","msg":"stream: started","id":"2bfanpx7"}
+{"time":"2025-03-12T05:52:02.08946344-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"2bfanpx7"}
+{"time":"2025-03-12T05:52:02.08949301-04:00","level":"INFO","msg":"handler: started","stream_id":"2bfanpx7"}
+{"time":"2025-03-12T05:52:02.089487727-04:00","level":"INFO","msg":"sender: started","stream_id":"2bfanpx7"}
+{"time":"2025-03-12T05:52:02.309489714-04:00","level":"INFO","msg":"Starting system monitor"}

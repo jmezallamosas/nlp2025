@@ -1,0 +1,68 @@
+Epoch: 1, Average Loss: 5.7660
+[34m[1mwandb[0m: Ctrl + C detected. Stopping sweep.
+Exception ignored in: <generator object tqdm.__iter__ at 0x2b852d58e7b0>
+Traceback (most recent call last):
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/tqdm/std.py", line 1196, in __iter__
+    self.close()
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/tqdm/notebook.py", line 279, in close
+    self.disp(bar_style='danger', check_delay=False)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/tqdm/notebook.py", line 178, in display
+    pbar.bar_style = bar_style
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/traitlets/traitlets.py", line 716, in __set__
+    self.set(obj, value)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/traitlets/traitlets.py", line 706, in set
+    obj._notify_trait(self.name, old_value, new_value)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/traitlets/traitlets.py", line 1513, in _notify_trait
+    self.notify_change(
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipywidgets/widgets/widget.py", line 700, in notify_change
+    self.send_state(key=name)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipywidgets/widgets/widget.py", line 586, in send_state
+    self._send(msg, buffers=buffers)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipywidgets/widgets/widget.py", line 825, in _send
+    self.comm.send(data=msg, buffers=buffers)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/comm/base_comm.py", line 147, in send
+    self.publish_msg(
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/comm/comm.py", line 37, in publish_msg
+    self.kernel.session.send(
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/jupyter_client/session.py", line 863, in send
+    stream.send_multipart(to_send, copy=copy)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 346, in send_multipart
+    return self.io_thread.send_multipart(*args, **kwargs)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 276, in send_multipart
+    self.schedule(lambda: self._really_send(*args, **kwargs))
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 267, in schedule
+    self._event_pipe.send(b"")
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/zmq/sugar/socket.py", line 707, in send
+    return super().send(data, flags=flags, copy=copy, track=track)
+  File "_zmq.py", line 1092, in zmq.backend.cython._zmq.Socket.send
+  File "_zmq.py", line 1134, in zmq.backend.cython._zmq.Socket.send
+  File "_zmq.py", line 1209, in zmq.backend.cython._zmq._check_closed
+zmq.error.ZMQError: Socket operation on non-socket
+Exception ignored in sys.unraisablehook: <built-in function unraisablehook>
+Traceback (most recent call last):
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 604, in flush
+    self.pub_thread.schedule(self._flush)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 267, in schedule
+    self._event_pipe.send(b"")
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/zmq/sugar/socket.py", line 707, in send
+    return super().send(data, flags=flags, copy=copy, track=track)
+  File "_zmq.py", line 1092, in zmq.backend.cython._zmq.Socket.send
+  File "_zmq.py", line 1134, in zmq.backend.cython._zmq.Socket.send
+  File "_zmq.py", line 1209, in zmq.backend.cython._zmq._check_closed
+zmq.error.ZMQError: Socket operation on non-socket
+Exception ignored in sys.unraisablehook: <built-in function unraisablehook>
+Traceback (most recent call last):
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/wandb/sdk/lib/console_capture.py", line 147, in write_with_callbacks
+    n = orig_write(s)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 694, in write
+    self._schedule_flush()
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 590, in _schedule_flush
+    self.pub_thread.schedule(_schedule_in_thread)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 267, in schedule
+    self._event_pipe.send(b"")
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/zmq/sugar/socket.py", line 707, in send
+    return super().send(data, flags=flags, copy=copy, track=track)
+  File "_zmq.py", line 1092, in zmq.backend.cython._zmq.Socket.send
+  File "_zmq.py", line 1134, in zmq.backend.cython._zmq.Socket.send
+  File "_zmq.py", line 1209, in zmq.backend.cython._zmq._check_closed
+zmq.error.ZMQError: Socket operation on non-socket

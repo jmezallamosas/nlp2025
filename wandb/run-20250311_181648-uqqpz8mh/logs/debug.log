@@ -1,0 +1,95 @@
+2025-03-11 18:16:48,197 INFO    Thread-83 :235577 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-11 18:16:48,197 INFO    Thread-83 :235577 [wandb_setup.py:_flush():67] Configure stats pid to 235577
+2025-03-11 18:16:48,197 INFO    Thread-83 :235577 [wandb_setup.py:_flush():67] Loading settings from /home/mezallamosas.j/.config/wandb/settings
+2025-03-11 18:16:48,197 INFO    Thread-83 :235577 [wandb_setup.py:_flush():67] Loading settings from /home/mezallamosas.j/nlp2025/wandb/settings
+2025-03-11 18:16:48,197 INFO    Thread-83 :235577 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-11 18:16:48,197 INFO    Thread-83 :235577 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /home/mezallamosas.j/nlp2025/wandb/run-20250311_181648-uqqpz8mh/logs/debug.log
+2025-03-11 18:16:48,197 INFO    Thread-83 :235577 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /home/mezallamosas.j/nlp2025/wandb/run-20250311_181648-uqqpz8mh/logs/debug-internal.log
+2025-03-11 18:16:48,197 INFO    Thread-83 :235577 [wandb_init.py:monkeypatch_ipython():599] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x2b850393eac0>
+2025-03-11 18:16:48,198 INFO    Thread-83 :235577 [wandb_init.py:init():761] calling init triggers
+2025-03-11 18:16:48,198 INFO    Thread-83 :235577 [wandb_init.py:init():766] wandb.init called with sweep_config: {'batch_size': 128, 'embeddings_size': 50, 'epochs': 10, 'hidden_units': 128, 'lr': 0.001, 'ngram': 3, 'test_pct': 0.1, 'text_type': 'word'}
+config: {'_wandb': {}}
+2025-03-11 18:16:48,198 INFO    Thread-83 :235577 [wandb_init.py:init():784] starting backend
+2025-03-11 18:16:48,198 INFO    Thread-83 :235577 [wandb_init.py:init():788] sending inform_init request
+2025-03-11 18:16:48,200 INFO    Thread-83 :235577 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-03-11 18:16:48,200 INFO    Thread-83 :235577 [wandb_init.py:init():798] backend started and connected
+2025-03-11 18:16:48,208 INFO    Thread-83 :235577 [wandb_run.py:_config_callback():1261] config_cb None None {'batch_size': 128, 'embeddings_size': 50, 'epochs': 10, 'hidden_units': 128, 'lr': 0.001, 'ngram': 3, 'test_pct': 0.1, 'text_type': 'word'}
+2025-03-11 18:16:48,218 INFO    Thread-83 :235577 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2025-03-11 18:16:48,218 INFO    Thread-83 :235577 [wandb_run.py:_label_probe_notebook():1214] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-03-11 18:16:48,218 INFO    Thread-83 :235577 [wandb_init.py:init():891] updated telemetry
+2025-03-11 18:16:48,272 INFO    Thread-83 :235577 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-11 18:16:48,467 INFO    Thread-83 :235577 [wandb_init.py:init():990] starting run threads in backend
+2025-03-11 18:16:48,774 INFO    Thread-83 :235577 [wandb_run.py:_console_start():2375] atexit reg
+2025-03-11 18:16:48,775 INFO    Thread-83 :235577 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-11 18:16:48,775 INFO    Thread-83 :235577 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-11 18:16:48,775 INFO    Thread-83 :235577 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-03-11 18:16:48,776 INFO    Thread-83 :235577 [wandb_init.py:init():1032] run started, returning control to user process
+2025-03-11 18:17:08,465 INFO    MainThread:235577 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-11 18:17:08,466 INFO    MainThread:235577 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-11 18:17:16,128 INFO    Thread-83 :235577 [wandb_run.py:_finish():2112] finishing run biofx/neural-language-model/uqqpz8mh
+2025-03-11 18:17:16,129 INFO    Thread-83 :235577 [jupyter.py:save_history():458] not saving jupyter history
+2025-03-11 18:17:16,129 INFO    Thread-83 :235577 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-11 18:17:16,130 INFO    Thread-83 :235577 [wandb_init.py:_jupyter_teardown():581] cleaning up jupyter logic
+2025-03-11 18:17:16,130 INFO    Thread-83 :235577 [wandb_run.py:_atexit_cleanup():2340] got exitcode: 1
+2025-03-11 18:17:16,130 INFO    Thread-83 :235577 [wandb_run.py:_restore():2322] restore
+2025-03-11 18:17:16,130 INFO    Thread-83 :235577 [wandb_run.py:_restore():2328] restore done
+2025-03-11 18:17:16,131 INFO    Thread-83 :235577 [wandb_run.py:_restore():2322] restore
+2025-03-11 18:17:16,131 INFO    Thread-83 :235577 [wandb_run.py:_restore():2328] restore done
+2025-03-11 18:17:16,131 ERROR   Thread-83 :235577 [wandb_run.py:_atexit_cleanup():2361] Problem finishing run
+Traceback (most recent call last):
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/wandb/agents/pyagent.py", line 306, in _run_job
+    self._function()
+  File "/tmp/ipykernel_235577/315902905.py", line 40, in main
+    model, final_loss = full_pipeline(
+  File "/tmp/ipykernel_235577/1426414026.py", line 246, in full_pipeline
+    final_loss = train(dataloader=dataloader_train, model=model, epochs=epochs, lr=lr)
+  File "/tmp/ipykernel_235577/1426414026.py", line 203, in train
+    print(f"Epoch: {epoch+1}, Average Loss: {avg_epoch_loss:.4f}")
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/wandb/sdk/lib/console_capture.py", line 147, in write_with_callbacks
+    n = orig_write(s)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 694, in write
+    self._schedule_flush()
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 590, in _schedule_flush
+    self.pub_thread.schedule(_schedule_in_thread)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 267, in schedule
+    self._event_pipe.send(b"")
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/zmq/sugar/socket.py", line 707, in send
+    return super().send(data, flags=flags, copy=copy, track=track)
+  File "_zmq.py", line 1092, in zmq.backend.cython._zmq.Socket.send
+  File "_zmq.py", line 1134, in zmq.backend.cython._zmq.Socket.send
+  File "_zmq.py", line 1209, in zmq.backend.cython._zmq._check_closed
+zmq.error.ZMQError: Socket operation on non-socket
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 2352, in _atexit_cleanup
+    self._on_finish()
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 2604, in _on_finish
+    with progress.progress_printer(
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/wandb/sdk/lib/progress.py", line 92, in progress_printer
+    with printer.dynamic_text() as text_area:
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/wandb/sdk/lib/printer.py", line 436, in dynamic_text
+    handle = self._ipython_display.display(
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/IPython/core/display_functions.py", line 305, in display
+    publish_display_data(data=format_dict, metadata=md_dict, **kwargs)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+    display_pub.publish(
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/zmqshell.py", line 103, in publish
+    self._flush_streams()
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/zmqshell.py", line 66, in _flush_streams
+    sys.stdout.flush()
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 604, in flush
+    self.pub_thread.schedule(self._flush)
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/ipykernel/iostream.py", line 267, in schedule
+    self._event_pipe.send(b"")
+  File "/home/mezallamosas.j/.conda/envs/nlp/lib/python3.9/site-packages/zmq/sugar/socket.py", line 707, in send
+    return super().send(data, flags=flags, copy=copy, track=track)
+  File "_zmq.py", line 1092, in zmq.backend.cython._zmq.Socket.send
+  File "_zmq.py", line 1134, in zmq.backend.cython._zmq.Socket.send
+  File "_zmq.py", line 1209, in zmq.backend.cython._zmq._check_closed
+zmq.error.ZMQError: Socket operation on non-socket

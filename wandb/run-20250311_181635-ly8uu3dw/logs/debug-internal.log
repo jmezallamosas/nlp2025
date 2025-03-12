@@ -1,0 +1,11 @@
+{"time":"2025-03-11T18:16:35.493433109-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/home/mezallamosas.j/nlp2025/wandb/run-20250311_181635-ly8uu3dw/logs/debug-core.log"}
+{"time":"2025-03-11T18:16:35.623049796-04:00","level":"INFO","msg":"created new stream","id":"ly8uu3dw"}
+{"time":"2025-03-11T18:16:35.62313786-04:00","level":"INFO","msg":"stream: started","id":"ly8uu3dw"}
+{"time":"2025-03-11T18:16:35.623147959-04:00","level":"INFO","msg":"handler: started","stream_id":"ly8uu3dw"}
+{"time":"2025-03-11T18:16:35.623189979-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"ly8uu3dw"}
+{"time":"2025-03-11T18:16:35.623195511-04:00","level":"INFO","msg":"sender: started","stream_id":"ly8uu3dw"}
+{"time":"2025-03-11T18:16:35.751617922-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-11T18:17:06.489293144-04:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-11T18:17:29.953687029-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-11T18:17:29.955983069-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-11T18:17:30.392573568-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
