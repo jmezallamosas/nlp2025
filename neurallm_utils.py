@@ -5,6 +5,7 @@ import nltk
 import csv
 import torch
 import torch.nn as nn
+from typing import List
 from gensim.models import Word2Vec
 
 nltk.download('punkt')
@@ -191,3 +192,44 @@ def train_word2vec(data: list[list[str]], embeddings_size: int,
 
     model = Word2Vec(data, vector_size=embeddings_size, window=window, min_count=min_count, sg=sg)
     return model
+
+
+
+def create_ngrams(tokens: list, n: int) -> list:
+    """Creates n-grams for the given token sequence.
+    Args:
+      tokens (list): a list of tokens as strings
+      n (int): the length of n-grams to create
+
+    Returns:
+      list: list of tuples of strings, each tuple being one of the individual n-grams
+    """
+    # STUDENTS IMPLEMENT
+    res = []
+    for i in range(0, len(tokens)-n+1):
+        res.append(tuple(tokens[i:i+n]))
+    return res
+
+def format_sentence(tokens_list: List[List[str]], by_char = False) -> str:
+  """Removes <s> at the start of the sentence and </s> at ehe end. Joins the list of tokens into a string and capitalizes it.
+  Args:
+    tokens (list(list)): the list of tokens list to be formatted into a sentence
+
+  Returns:
+    string: formatted sentence as a string
+  
+  """
+  text = "" # Initializing final sentence
+  for tokens in tokens_list: # Parsing through each individual sentence
+    while tokens[0] == '<s>': # Removes all <s> at the beggining even if there are several for ngram > 2 models
+      tokens.pop(0)
+    if tokens[-1] == '</s>': # Removes the one </s> at the end of the sentence
+      tokens.pop(-1)
+    if by_char:
+      sentence = "".join(tokens) # Converts list of tokens into a string
+      sentence = sentence.capitalize() # Capitalizes the first letter of each sentence
+    else:
+      sentence = " ".join(tokens) # Converts list of tokens into a string
+      sentence = sentence.capitalize() # Capitalizes the first letter of each sentence
+    text += sentence + ".\n" # Adds a period and space separator between sentences
+  return text.strip(" ") # Removes the last space in the last sentence
